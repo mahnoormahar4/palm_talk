@@ -1,0 +1,38 @@
+name: palm_talk
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  provider: ^6.0.5
+  camera: ^0.11.0+2
+  flutter_tts: ^4.0.2
+  # FIXED: upgraded from ^0.13.6 (deprecated) to ^1.2.0
+  http: ^1.2.0
+  # FIXED: was ^0.12.1 in pubspec but lock resolved 0.10.4 (mismatch).
+  # Pinned to ^0.10.4 to match the lock and the code's API usage.
+  tflite_flutter: ^0.12.1
+  google_mlkit_commons: ^0.11.1
+  google_mlkit_pose_detection: ^0.14.1
+  hand_landmarker: ^2.1.2
+  google_mlkit_face_mesh_detection: ^0.4.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/models/psl_model.tflite
+    - assets/models/label_map.json
